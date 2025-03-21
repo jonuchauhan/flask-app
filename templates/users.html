@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <ul>
+    {% for user in users %}
+        <li>{{ user[0] }} - {{ user[1] }} - {{ user[2] }} </li>
+    {% endfor %}
+    </ul>
+    <h2>Add New User</h2>
+    <form method="POST">
+        <label>Name: <input type="text" name="name" required></label><br>
+        <label>Email: <input type="email" name="email" required></label><br>
+        <input type="submit" value="Add User">
+    </form>
+</body>
+</html>
